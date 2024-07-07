@@ -5,7 +5,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await TrialManager.initialize();
 
-  final trialExpired = await TrialManager.isTrialExpired(trialPeriodDays: 1);
+  final trialExpired = await TrialManager.isTrialExpired(trialPeriodDays: 0);
 
   runApp(MyApp(trialExpired: trialExpired));
 }
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     if(trialExpired){
       return  MaterialApp(
-        home: TrialManager.getExpirationScreen(type: ExpirationScreenType.type1 ),
+        home: TrialManager.getExpirationScreen(type: ExpirationScreenType.type1),
       );
     }
     return MaterialApp(

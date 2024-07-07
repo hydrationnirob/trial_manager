@@ -6,14 +6,14 @@ import 'package:trial_manager/trial_manager.dart';
 
 
 export 'src/enum.dart';
-export 'src/screens/ExpirationScreenType1.dart';
-export 'src/screens/ExpirationScreenType2.dart';
-export 'src/screens/ExpirationScreenType3.dart';
+export 'src/screens/expiration_screen_type1.dart';
+export 'src/screens/expiration_screen_type2.dart';
+export 'src/screens/expiration_screen_type3.dart';
 
 class TrialManager {
   static const String _installationDateKey = 'installation_date';
   static const int _defaultTrialPeriodDays = 30;
-  static const String _screenTitle = 'Your trial period $_defaultTrialPeriodDays days has expired ';
+  static const String _screenTitle = 'Your Trial Period $_defaultTrialPeriodDays Days Has Expired ';
   static const String _screenMessage = 'Please purchase the full version to continue using the app.';
   static const String _upgradeButtonText = 'Upgrade Now';
   static const String _contactAddress = '';
@@ -71,18 +71,25 @@ class TrialManager {
         return  ExpirationScreenType1(
           title: title,
           message: message,
-          upgradeButtonText: upgradeButtonText,
+
           contactAddress: contactAddress,
         );
       case ExpirationScreenType.type2:
-        return const ExpirationScreenType2();
+        return  ExpirationScreenType2(
+          title: title,
+          message: message,
+          contactAddress: contactAddress,
+        );
       case ExpirationScreenType.type3:
-        return const ExpirationScreenType3();
+        return  ExpirationScreenType3(
+          title: title,
+          message: message,
+          contactAddress: contactAddress,
+        );
       default:
         return  ExpirationScreenType1(
           title: title,
           message: message,
-          upgradeButtonText: upgradeButtonText,
           contactAddress: contactAddress,
         );
     }

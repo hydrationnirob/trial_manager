@@ -6,13 +6,13 @@ class ExpirationScreenType1 extends StatelessWidget {
     super.key,
     required this.title,
     required this.message,
-    required this.upgradeButtonText,
+
     required this.contactAddress,
   });
 
   final String title;
   final String message;
-  final String upgradeButtonText;
+
   final String contactAddress;
 
   @override
@@ -35,7 +35,7 @@ class ExpirationScreenType1 extends StatelessWidget {
               Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
@@ -59,26 +59,7 @@ class ExpirationScreenType1 extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  // Navigate to the purchase screen or perform purchase logic
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                  textStyle: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                child: Text(
-                  upgradeButtonText,
-                  style: const TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+
             ],
           ),
         ),

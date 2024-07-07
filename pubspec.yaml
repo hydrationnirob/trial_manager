@@ -1,6 +1,6 @@
 name: trial_manager
-description: "The trial_manager package for Flutter provides utilities to manage trial periods within applications. It is designed to be simple to use and easy to integrate into your application."
-version: 0.0.1
+description: "The trial_manager package for Flutter provides utilities to manage trial periods within applications."
+version: 0.0.2
 homepage: "https://github.com/hydrationnirob/trial_manager.git"
 repository: "https://github.com/hydrationnirob/trial_manager.git"
 
